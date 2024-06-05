@@ -230,6 +230,13 @@ display: flex;
 
    
 }
+.gay {
+    width: 100%;
+    background-color: #e8e8e8;
+    border: 0;
+    height: 500px;
+    margin-bottom: 1.5em;
+}
 .info-about-box {
     display: flex;
    padding-top: 40px;
@@ -306,34 +313,29 @@ right: 15px;
 color: rgba(232, 224, 224, 0.797);
 font-size: 13px;
 }
-#second-text{
-width: 1220px;
-    
-    
+#second-text {
+    width: 1220px;
     margin-left: 125px;
     background-color: white;
-   
 }
 
-.gay{
- width: 100%;
-background-color: #e8e8e8;
-border: 0;
-    height: 500px;
-    margin-bottom: 1.5em;
+.second-text-list {
+    display: flex;
 }
 
-
-
-.second-text-item{
+.second-text-item {
     color: black;
-        white-space: nowrap;
-        font-size: 15px;
-        padding: 16px;
-        position: relative;
-       
-        
+    white-space: nowrap;
+    font-size: 15px;
+    padding: 16px;
+    position: relative;
 }
+
+.second-text-link {
+    color: black;
+    text-decoration: none;
+}
+
 .second-text-item:hover {
     background-color: #179bd7;
 }
@@ -342,16 +344,46 @@ border: 0;
     color: white;
     text-decoration: underline;
 }
-.second-text-link{
-    color: black;
-}
-.second-text-list{
-    display: flex;
-}
-.second-text-list .second-text-item:not(:first-child) {
+
+.second-text-item:not(:first-child) {
     padding-right: 33px;
-   
 }
-        /* so its gonna be late background: #ffffff none repeat scroll 0 0;
-        box-shadow: 0 0 2px #cfcfcf;
-        padding: 30px; */
+
+/* Клас для додаткового тексту, який з'являється при наведенні */
+.hover-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+   
+    background-color: #179bd7;
+    color: white;
+    
+    padding: 10px 10px ;
+    box-shadow: 0 0 2px #cfcfcf;
+    border-radius: 4px;
+column-count: 2;
+}
+
+/* Відображення блоку при наведенні */
+.second-text-item:hover .hover-content {
+    display: block;
+    
+}
+.hover-content1{
+
+position: relative;
+border-bottom: solid 1px #253b80;
+width: 70px;
+font-size: 20px;
+border-bottom: solid 1px #aeb2be;
+
+}
+.hover-content-link{
+
+    color: white;
+}
+.hover-content-link:hover{
+    text-decoration: underline;
+}
